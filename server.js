@@ -18,7 +18,7 @@ function loadWorksData() {
   return new Promise((resolve, reject) => {
     const results = [];
 
-    fs.createReadStream("Nicolas_Cage_Works.csv")
+    fs.createReadStream("./Nicolas_Cage_Works.csv")
       .pipe(csv())
       .on("data", (row) => results.push(row))
       .on("end", () => {
