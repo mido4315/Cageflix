@@ -60,3 +60,14 @@ function loadWorksData() {
 loadWorksData().catch((err) => {
   console.error("Failed to load initial data:", err);
 });
+
+// Main endpoint
+app.get("/api/nicolas-cage", (req, res) => {
+  if (!isDataLoaded) {
+    return res.status(503).json({
+      error: "Service Unavailable",
+      message: "Data is still loading. Please try again shortly.",
+    });
+  }
+  res.json(works);
+});
