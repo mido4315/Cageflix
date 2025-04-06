@@ -76,9 +76,3 @@ const cors = require("cors");
 
 // Middleware
 app.use(cors());
- 
-// Handle process termination
-process.on("SIGINT", () => {
-  console.log("\n🔴 Server shutting down...");
-  process.exit(0);
-});
