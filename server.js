@@ -27,3 +27,36 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
+const fs = require("fs");
+const csv = require("csv-parser");
+
+// Data storage
+let works = [];
+let isDataLoaded = false;
+
+// Function to load CSV data
+function loadWorksData() {
+  return new Promise((resolve, reject) => {
+    const results = [];
+
+    fs.createReadStream("Nicolas_Cage_Works.csv")
+      .pipe(csv())
+      .on("data", (row) => results.push(row))
+      .on("end", () => {
+        works = results;
+        isDataLoaded = true;
+        console.log(`✅ Successfully loaded ${works.length} works.`);
+        resolve();
+      })
+      .on("error", (err) => {
+        console.error("❌ Error reading CSV:", err);
+        reject(err);
+      });
+  });
+}
+
+// Load data when server starts
+loadWorksData().catch((err) => {
+  console.error("Failed to load initial data:", err);
+});
