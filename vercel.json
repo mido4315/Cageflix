@@ -7,7 +7,7 @@
     }
   ],
   "functions": {
-    "api/server.js": {
+    "server.js": {
       "includeFiles": "Nicolas_Cage_Works.csv"
     }
   }
