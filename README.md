@@ -45,7 +45,7 @@ Returns a JSON response with the following fields:
   "actors": "Nicolas Cage, ...",
   "posterUrl": "https://image.tmdb.org/..."
 }
-
+```
 
 ## 🚀 Setup Instructions
 
@@ -56,23 +56,23 @@ Make sure you have **Node.js**, **npm**, and optionally **Jupyter** + **Python 3
 ```bash
 git clone https://github.com/your-username/cageflix.git
 cd cageflix
-
+```
 ### 2. Backend (Express API)
 ```bash
 cd backend
 npm install
 node server.js
-
+```
 ### 3. Frontend (React + Vite)
 ```bash
 cd cageflix-frontend
 npm install
 npm run dev
-
+```
 ### 4. Data Processing (Optional but fun)
 ```bash
 cd data-processing
 jupyter notebook filter_nicolas_cage_works.ipynb
-
+```
 
 
