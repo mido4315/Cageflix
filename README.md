@@ -11,28 +11,37 @@ CageFlix is a web application that allows users to explore movies and TV shows f
 | Data Prep | Python, Pandas, Jupyter | Great for working with datasets                |
 | Data      | IMDb + TMDB APIs        | IMDb = truth, TMDB = posters                   |
 
-## Features
-- Browse Nicolas Cage's movies and TV shows.
-- View movie posters fetched from TMDB.
-- Search and filter movies using the React frontend.
-- Backend API to serve processed data.
-- Data processing pipeline to clean and merge IMDb and TMDB datasets.
+## ✨ Features
 
-## Project Structure
+- ✅ Clean, responsive UI built with modular React components (e.g., MovieCard, Search, Loading).
+- ✅ Browse Nicolas Cage’s movies and TV shows.
+- ✅ Fuzzy search and filter by name, genre, actors, and year using Fuse.js.
+- ✅ Dynamic movie cards with details and loading states.
+- ✅ Backend API to serve processed movie data.
+- ✅ Data processing pipeline in Python to clean, merge, and transform IMDb and TMDB datasets.
+
+
+## 📁 Project Structure
 The project is organized into three main directories:
 
-Cageflix/
-├── backend/              → Express.js API serving Cage movie data
-├── cageflix-frontend/    → React + Vite frontend for UI
-├── data-processing/      → Python + Jupyter scripts for data cleaning and processing
-└── README.md             → Main project documentation
+Cageflix/\
+├── backend/              → Express.js API serving Cage movie data\
+├── cageflix-frontend/    → React + Vite frontend for UI\
+├── data-processing/      → Python + Jupyter scripts for data cleaning and processing\
+└── README.md             → Main project documentation
 
 
+## 🚀 Live Demos
 
-## 🚀 Live API
+### Frontend Demo
 
-Available here: [https://cageflix.onrender.com/api/nicolas-cage](https://cageflix.onrender.com/api/nicolas-cage)  
-Returns a JSON response with the following fields:
+The frontend is live and accessible here: [https://cageflix-frontend.onrender.com](https://cageflix-frontend.onrender.com)  
+You can interact with the app, browse movies, and explore details fetched from the backend.
+
+### Backend API
+
+The backend is live and can be accessed here: [https://cageflix.onrender.com/api/nicolas-cage]()  
+It returns a JSON response with the following fields:
 
 ```json
 {
@@ -46,7 +55,6 @@ Returns a JSON response with the following fields:
   "posterUrl": "https://image.tmdb.org/..."
 }
 ```
-
 ## 🚀 Setup Instructions
 
 Make sure you have **Node.js**, **npm**, and optionally **Jupyter** + **Python 3** installed.
