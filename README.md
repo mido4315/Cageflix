@@ -35,8 +35,8 @@ Cageflix/\
 
 ### Frontend Demo
 
-The frontend is live and accessible here: [https://cageflix-frontend.onrender.com](https://cageflix-frontend.onrender.com)  
-You can interact with the app, browse movies, and explore details fetched from the backend.
+The frontend is live and accessible here: [https://cageflix-gamma.vercel.app](https://cageflix-gamma.vercel.app)  
+You can interact with the app, browse movies, and search through Nicolas Cage career.
 
 ### Backend API
 
