@@ -8,6 +8,7 @@ const MovieCard = ({ movie }) => {
     genres,
     averageRating,
     numVotes,
+    actors,
     posterUrl,
   } = movie;
 
