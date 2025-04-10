@@ -5,10 +5,11 @@
 //import './App.css'
 
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Search from "./components/Search";
 import Loading from "./components/Loading";
 import MovieCard from "./components/MovieCard";
+import Fuse from "fuse.js";
 
 const API_BASE_URL = "https://cageflix.onrender.com";
 
@@ -47,6 +48,18 @@ const App = () => {
     fetchNicolasCageWorks();
   }, []);
 
+  const fuse = useMemo(() => {
+    return new Fuse(movieList, {
+      keys: ["primaryTitle", "startYear", "genres", "actors"],
+      threshold: 0.4,
+    });
+  }, [movieList]);
+
+  // Get filtered results
+  const filteredMovies = searchTerm
+    ? fuse.search(searchTerm).map((result) => result.item)
+    : movieList;
+
   return (
     <main>
       <div className="pattern"></div>
@@ -67,8 +80,8 @@ const App = () => {
             <p className="text-red-500">{errorMessage}</p>
           ) : (
             <ul>
-              {movieList.map((movie) => (
-                <MovieCard movie={movie} />
+              {filteredMovies.map((movie, idx) => (
+                <MovieCard key={idx} movie={movie} />
               ))}
             </ul>
           )}
