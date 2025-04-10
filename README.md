@@ -40,7 +40,7 @@ You can interact with the app, browse movies, and search through Nicolas Cage ca
 
 ### Backend API
 
-The backend is live and can be accessed here: [https://cageflix.onrender.com/api/nicolas-cage]()  
+The backend is live and can be accessed here: [https://cageflix.onrender.com/api/nicolas-cage](https://cageflix.onrender.com/api/nicolas-cage)  
 It returns a JSON response with the following fields:
 
 ```json
