@@ -83,4 +83,11 @@ cd data-processing
 jupyter notebook filter_nicolas_cage_works.ipynb
 ```
 
+# 🐞 Known Issues
+- Some older or obscure titles may not have posters (TMDB doesn't have full coverage).
+- The backend is hosted on Render, which goes to sleep after 15 minutes of inactivity. It may take up to 1 minute to wake up.
 
+# 🧭 Future Enhancements
+- ✅ Add pagination and lazy loading for smoother UX
+- 🧳 Create movie details page to show more details
+- 💬 Add user comments or reviews for each film
