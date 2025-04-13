@@ -55,6 +55,13 @@ It returns a JSON response with the following fields:
   "posterUrl": "https://image.tmdb.org/..."
 }
 ```
+### 🛠 Keeping the Backend Awake  
+ Render’s free tier causes the backend to sleep after 15 minutes of inactivity.
+ To avoid delays, I deployed a simple Python script on AWS EC2 instance that pings the API every 5 minutes
+ to keep it warm. [🔗 View the Keep-Alive Script on GitHub](https://github.com/mido4315/keep-render-awake.git)
+
+
+
 ## 🚀 Setup Instructions
 
 Make sure you have **Node.js**, **npm**, and optionally **Jupyter** + **Python 3** installed.
