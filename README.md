@@ -91,3 +91,14 @@ jupyter notebook filter_nicolas_cage_works.ipynb
 - ✅ Add pagination and lazy loading for smoother UX
 - 🧳 Create movie details page to show more details
 - 💬 Add user comments or reviews for each film
+
+## 📄 License & Resources
+
+### License
+This project is open-source under the **MIT License**.  
+
+###  Resources
+
+- [**IMDb Datasets**](https://developer.imdb.com/non-commercial-datasets/) – Used to obtain metadata like titles, ratings, genres, and actors  
+- [**TMDB API**](https://developer.themoviedb.org/docs) – Used to fetch movie posters  
+- [**Figma**](https://www.figma.com/proto/4VtOHS1zaZlkIGRetAGtht/Movie-App-w--React?node-id=89001-1372&t=mSooD2Lpjjj5P3cl-1) – Used for designing and planning the UI layout  
